@@ -1,0 +1,44 @@
+
+.App, .content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-container {
+    flex-direction: row;
+    font-size: 45px;
+}
+
+
+
+.input-container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input {
+    max-width: 80px;
+    outline: none;
+    border: none;
+}
+
+ul {
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+
+}
