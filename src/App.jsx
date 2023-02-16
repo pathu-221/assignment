@@ -107,8 +107,8 @@ function App() {
           variant={`${answer === 'right' ? 'success' : 'danger'} d-flex justify-content-between `}>
             <Alert.Heading className='d-flex align-items-center m-0'>
               {
-                answer === 'right' ? (<><TiTick style={{ marginRight: '8px' }} /> Right</>) :
-                  (<><ImCross style={{ marginRight: '8px' }} /> Wrong</>)
+                answer === 'right' ? (<><TiTick style={{ marginRight: '8px' }} /> Right !</>) :
+                  (<><ImCross style={{ marginRight: '8px' }} /> Wrong !</>)
 
               }
             </Alert.Heading>
