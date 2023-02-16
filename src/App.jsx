@@ -13,6 +13,7 @@ function App() {
   const [answer, setAnswer] = useState(true);
   const [input, setInput] = useState({ a1: 0, a2: 0 });
   const [show, setShow] = useState(false);
+  const [currentLevel, setcurrentLevel] = useState(1);
 
   const generateSeq = () => {
     // let a1 = 4, a2 = 1, d1 = 3;
@@ -73,8 +74,9 @@ function App() {
     <>
       <NavBar />
       <div className='App'>
+      <p className='paragraph'>Mental Maths: -Level {currentLevel}</p>
         <div className="content-container">
-
+  
           <ul>
             {
               finalseq && finalseq.map((pair, index) => {
@@ -110,7 +112,11 @@ function App() {
 
               }
             </Alert.Heading>
-            <Button variant="light" onClick={() => { generateSeq(); setShow(false); setAnswer(null) }}>Next</Button>
+            <Button variant="light" onClick={() => { 
+              generateSeq(); 
+              setShow(false); 
+              setcurrentLevel(currentLevel + 1);
+              setAnswer(null) }}>Next</Button>
           </Alert>
           {(
             answer === 'wrong') ?
