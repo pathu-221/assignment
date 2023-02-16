@@ -74,7 +74,7 @@ function App() {
     <>
       <NavBar />
       <div className='App'>
-      <p className='paragraph'>Mental Maths: -Level {currentLevel}</p>
+      <p className='paragraph'>Mental Maths -Level {currentLevel}</p>
         <div className="content-container">
   
           <ul>
@@ -104,7 +104,7 @@ function App() {
         answer &&
         <div className="d-flex flex-column mx-4 fixed-bottom">
           <Alert show={show} 
-          variant={`${answer === 'right' ? 'success' : 'danger'} d-flex justify-content-between `}>
+          variant={`${answer === 'right' ? 'success' : 'danger'} py-2 d-flex justify-content-between `}>
             <Alert.Heading className='d-flex align-items-center m-0'>
               {
                 answer === 'right' ? (<><TiTick style={{ marginRight: '8px' }} /> Right !</>) :
