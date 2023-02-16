@@ -24,7 +24,6 @@ function App() {
     seq[0] = { a1: a1, a2: a2 };
     setInput({ a1: '', a2: '' });
 
-    console.log({a1, a2, d1});
     for (var i = 1; i < 5; i++) {
       if (i % 2 === 0) {
         let temp = a1 + a2;
@@ -45,8 +44,6 @@ function App() {
   useEffect(() => {
     generateSeq();
 
-    console.log(finalseq);
-
     return () => {
 
     }
@@ -61,15 +58,12 @@ function App() {
   }
 
   const check = () => {
-    console.log({ input, finalseq })
     setShow(true);
     if (input.a1 === finalseq[4].a1 && input.a2 === finalseq[4].a2) {
-      console.log('right');
       setAnswer('right');
 
     }
     else {
-      console.log('wrong');
       setAnswer('wrong');
     }
     setInput({ a1: '', a2: '' });
